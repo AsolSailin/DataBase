@@ -1,0 +1,34 @@
+﻿<Window x:Class="Wpf_Shop.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Shop.Windows"
+        mc:Ignorable="d"
+        Title="RegistrationWindow" Height="450" Width="800">
+    <Grid Background="#f3e9f7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Text="Name"></TextBlock>
+            <TextBox x:Name="tbName" Height="30"></TextBox>
+            <TextBlock Text="Login"></TextBlock>
+            <TextBox x:Name="tbLogin" Height="30"></TextBox>
+            <TextBlock Text="Password"></TextBlock>
+            <TextBox x:Name="tbPassword" Height="30"></TextBox>
+            <TextBlock Text="Role"></TextBlock>
+            <TextBox x:Name="tbRole" Height="30"></TextBox>
+            <TextBlock></TextBlock>
+            <Button Height="30" Click="Reg_Click" Background="#cc9ede" Content="Registration"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
