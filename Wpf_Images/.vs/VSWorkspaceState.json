@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Wpf_Images"
+    "\\Wpf_Images",
+    "\\Wpf_Images\\ADO"
   ],
-  "SelectedNode": "\\Wpf_Images\\ADO",
+  "SelectedNode": "\\Wpf_Images.sln",
   "PreviewInSolutionExplorer": false
 }
