@@ -30,19 +30,17 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <ScrollViewer>
-                <StackPanel>
-                    <ListBox x:Name="IngredientsList">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock>
+            <StackPanel>
+                <ListBox x:Name="IngredientsList">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
                                     <Run Text="{Binding Title}"></Run>
-                                </TextBlock>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </ScrollViewer>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
             <TextBlock></TextBlock>
             <Button Height="30" Click="CreateBtn_Click" Background="#cc9ede" Content="Create a recipe"></Button>
         </StackPanel>

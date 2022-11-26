@@ -23,16 +23,10 @@ namespace Wpf_ShopTwo.Windows
     public partial class IngredientsWindow : Window
     {
         public byte[] Image { get; set; }
-        private List<Item> items = new List<Item>();
-        private List<Item> ingredients = new List<Item>();
         public IngredientsWindow()
         {
             InitializeComponent();
-            var list = App.Connection.Item.ToList();
-            foreach (var prod in list)
-            {
-                items.Add(prod);
-            }
+            IngredientsList.ItemsSource = App.Connection.Item.ToList();
         }
         private void SelectBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -63,14 +57,8 @@ namespace Wpf_ShopTwo.Windows
             };
             App.Connection.Item.Add(item);
             App.Connection.SaveChanges();
-            foreach (var i in items)
-            {
-                ingredients.Add(i);
-            }
-            IngredientsList.ItemsSource = ingredients;
+            IngredientsList.ItemsSource = App.Connection.Item.ToList();
             MessageBox.Show("Item added");
         }
-
-
     }
 }

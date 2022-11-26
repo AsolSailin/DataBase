@@ -23,7 +23,7 @@ namespace Wpf_ShopTwo.Windows
     {
         private Account account;
         private List<Item> items = new List<Item>();
-        private List<Basket> basket = new List<Basket>();
+        private List<Basket> basket { get; set; }
         public BasketWindow()
         {
             InitializeComponent();
@@ -31,9 +31,9 @@ namespace Wpf_ShopTwo.Windows
 
         public BasketWindow(Account acc)
         {
+            this.account = acc;
             InitializeComponent();
             List.ItemsSource = App.Connection.Item.ToList();
-            account = acc;
             basket = App.Connection.Basket.Where(x => x.User_Id == account.User_Id).ToList();
             foreach (var prod in basket)
             {
@@ -49,7 +49,7 @@ namespace Wpf_ShopTwo.Windows
             Basket newBasket = new Basket()
             {
                 User_Id = account.User_Id,
-                Item_Id = item.Id,
+                Item = item,
             };
 
             App.Connection.Basket.Add(newBasket);

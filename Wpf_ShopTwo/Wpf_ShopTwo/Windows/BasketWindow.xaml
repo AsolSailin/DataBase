@@ -12,9 +12,9 @@
             <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel>
-            <TextBlock HorizontalAlignment="Center" Text="Basket"></TextBlock>
-            <ScrollViewer>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" Text="Basket"></TextBlock>
                 <StackPanel>
                     <ListView x:Name="BasketList">
                         <ListView.ItemTemplate>
@@ -29,12 +29,12 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackPanel>
-            </ScrollViewer>
-        </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
 
-        <StackPanel Grid.Column="1">
-            <TextBlock HorizontalAlignment="Center" Text="List"></TextBlock>
-            <ScrollViewer>
+        <ScrollViewer Grid.Column="1">
+            <StackPanel Grid.Column="1">
+                <TextBlock HorizontalAlignment="Center" Text="List"></TextBlock>
                 <StackPanel>
                     <ListView x:Name="List" SelectionChanged="Select">
                         <ListView.ItemTemplate>
@@ -49,7 +49,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackPanel>
-            </ScrollViewer>
-        </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>

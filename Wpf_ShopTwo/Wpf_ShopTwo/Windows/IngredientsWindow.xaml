@@ -29,23 +29,25 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
-            <TextBlock HorizontalAlignment="Center" Text="List"></TextBlock>
-            <StackPanel>
-                <ListView x:Name="IngredientsList" ScrollViewer.CanContentScroll="False">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <Image Source="{Binding Image}" Width="150" Height="150"/>
-                                <TextBlock Text="{Binding Title}"></TextBlock>
-                                <TextBlock Text="{Binding Group}"></TextBlock>
-                                <TextBlock Text="{Binding Count}"></TextBlock>
-                                <TextBlock Text="{Binding Info}"></TextBlock>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel Grid.Row="1">
+                <TextBlock HorizontalAlignment="Center" Text="List"></TextBlock>
+                <StackPanel>
+                    <ListView x:Name="IngredientsList" ScrollViewer.CanContentScroll="False">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Image Source="{Binding Image}" Width="150" Height="150"/>
+                                    <TextBlock Text="{Binding Title}"></TextBlock>
+                                    <TextBlock Text="{Binding Group}"></TextBlock>
+                                    <TextBlock Text="{Binding Count}"></TextBlock>
+                                    <TextBlock Text="{Binding Info}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
